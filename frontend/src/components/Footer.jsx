@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p>
-        AB BTAOOOOOOOOOOO
+        Powered by caffeine and questionable assumptions.
       </p>
     </footer>
   )
