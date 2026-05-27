@@ -6,17 +6,17 @@ app.use(express.json())
 app.use(express.static('dist'))
 let notes = [{
         id: "1",
-        content: "HTML is easy",
+        content: "My code has two states: compiling and 'just one more log statement'.",
         important: true
     },
     {
         id: "2",
-        content: "Browser can execute only JavaScript",
+        content: "I tried to catch a bug, but it threw an exception and escaped the debugger.",
         important: false
     },
     {
         id: "3",
-        content: "GET and POST are the most important methods of HTTP protocol",
+        content: "Our servers don't crash; they take unscheduled coffee breaks.",
         important: true
     }
 ]
