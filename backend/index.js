@@ -66,6 +66,34 @@ app.get('/api/notes/:id', (request, response) => {
     }
 })
 
+app.put('/api/notes/:id', (request, response) => {
+    const id = request.params.id
+    const body = request.body
+    const note = notes.find(currentNote => currentNote.id === id)
+
+    if (!note) {
+        return response.status(404).json({
+            error: 'note not found'
+        })
+    }
+
+    if (!body.content) {
+        return response.status(400).json({
+            error: 'content missing'
+        })
+    }
+
+    const updatedNote = {
+        ...note,
+        content: body.content,
+        important: Boolean(body.important)
+    }
+
+    notes = notes.map(currentNote => currentNote.id === id ? updatedNote : currentNote)
+
+    response.json(updatedNote)
+})
+
 app.delete('/api/notes/:id', (request, response) => {
     const id = request.params.id
     notes = notes.filter(note => note.id !== id)
