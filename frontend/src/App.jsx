@@ -5,8 +5,26 @@ import Notification from "./components/Notification"
 import noteService from './services/notes'
 import Footer from "./components/Footer"
 
+const initialNotes = [
+  {
+    id: "BDuvEENsuOs",
+    content: "My code has two states: compiling and 'just one more log statement'.",
+    important: true
+  },
+  {
+    id: "2vcKFD0pNTg",
+    content: "I tried to catch a bug, but it threw an exception and escaped the debugger.",
+    important: false
+  },
+  {
+    id: "FQn58p3mSG4",
+    content: "Our servers don't crash; they take unscheduled coffee breaks.",
+    important: true
+  }
+]
+
 const App = () => {
-  const [notes, setNotes] = useState([])
+  const [notes, setNotes] = useState(initialNotes)
   const [newNote, setNewNote] = useState('')
   const [showAll, setShowAll] = useState(true)
   const [errMessage, setErrMessage] = useState(null)
