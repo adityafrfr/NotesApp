@@ -7,17 +7,17 @@ import Footer from "./components/Footer"
 
 const initialNotes = [
   {
-    id: "1",
+    id: "BDuvEENsuOs",
     content: "My code has two states: compiling and 'just one more log statement'.",
     important: true
   },
   {
-    id: "2",
+    id: "2vcKFD0pNTg",
     content: "I tried to catch a bug, but it threw an exception and escaped the debugger.",
     important: false
   },
   {
-    id: "3",
+    id: "FQn58p3mSG4",
     content: "Our servers don't crash; they take unscheduled coffee breaks.",
     important: true
   }
